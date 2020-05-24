@@ -2,6 +2,7 @@ __author__ = 'shiv_ashish_niranjan'
 
 import unittest
 import time
+import HtmlTestRunner
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -20,7 +21,7 @@ class ViewProductDetails(unittest.TestCase):
     # --- Pre - Condition ---
     def setUp(self):
         # declare and initialize driver variable
-        self.driver = webdriver.Chrome(executable_path=cwd + "/../driver/chromedriver")
+        self.driver = webdriver.Chrome(executable_path=cwd + "/../../driver/chromedriver")
         # browser should be loaded in maximized window
         self.driver.maximize_window()
         # driver should wait implicitly for a given duration, for the element under consideration to load.
@@ -158,4 +159,4 @@ class ViewProductDetails(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    unittest.main()
+    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output=cwd + "/../../amazon/Reports"))

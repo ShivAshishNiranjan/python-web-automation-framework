@@ -12,7 +12,7 @@ class AmazonHomePage(unittest.TestCase):
     # --- Pre - Condition ---
     def setUp(self):
         # declare and initialize driver variable
-        self.driver = webdriver.Chrome(executable_path=cwd + "/../driver/chromedriver")
+        self.driver = webdriver.Chrome(executable_path=cwd + "/../../driver/chromedriver")
 
         # browser should be loaded in maximized window
         self.driver.maximize_window()
